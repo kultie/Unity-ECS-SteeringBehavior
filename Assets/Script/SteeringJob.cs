@@ -7,9 +7,9 @@ using Unity.Mathematics;
 using Unity.Burst;
 using Unity.Entities;
 
-[BurstCompile]
 public class SteeringJob: JobComponentSystem
 {
+    [BurstCompile]
     private struct Job : IJobForEach<SteeringAgentComponent, Translation, Rotation> {
 
         public float3 target;
